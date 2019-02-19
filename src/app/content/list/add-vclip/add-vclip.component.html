@@ -1,0 +1,29 @@
+<mat-accordion class="add-headers-align">
+    <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title fxFlex="90">
+          <h2>Video Clip Title</h2>
+        </mat-panel-title>
+        <mat-panel-description>
+          <mat-icon fxFlex="10">add</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+  
+      <mat-form-field class="add-form-item">
+        <input matInput placeholder="Title">
+      </mat-form-field>
+  
+      <mat-form-field class="add-form-item">
+        <input matInput type="time" min="0" placeholder="Start">
+      </mat-form-field>
+      
+      <mat-form-field class="add-form-item">
+        <input matInput type="time" min="0" placeholder="End">
+      </mat-form-field>
+  
+      <mat-action-row>
+        <button mat-button color="accent" (click)="nextStep()">Next</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  
+  </mat-accordion>

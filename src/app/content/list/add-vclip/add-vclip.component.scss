@@ -1,0 +1,20 @@
+.add-headers-align {
+    
+    .add-form-item {
+        margin-right: 10px;
+    }
+    
+    .mat-expansion-panel:not([class*='mat-elevation-z']) {
+        box-shadow: none;
+    } 
+
+    .mat-expansion-panel-header-title,
+    .mat-expansion-panel-header-description {
+        flex-basis: 0;
+    }
+
+    .mat-expansion-panel-header-description {
+        justify-content: space-between;
+        align-items: center;
+    }
+}
