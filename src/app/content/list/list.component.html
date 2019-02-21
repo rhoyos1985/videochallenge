@@ -1,20 +1,8 @@
 <mat-list class="lists_content" color="accent">
-  <mat-list-item>
-      <div mat-list-icon class="example-header-image"></div>
-    <h4 mat-line>Video Clip Title</h4>
-    <p mat-line>00:00 / 00:20 </p>
-  </mat-list-item>
-  <mat-divider></mat-divider>
-  <mat-list-item> 
+  <mat-list-item *ngFor="let video of videos">
     <div mat-list-icon class="example-header-image"></div>
-    <h4 mat-line>Video Clip Title</h4>
-    <p mat-line>00:00 / 00:20 </p>
+    <h4 mat-line> {{ video.title }}  </h4>
+    <p mat-line> {{ video.timeStart }} / {{ video.timeEnd }} </p>
+    <mat-divider></mat-divider>
   </mat-list-item>
-  <mat-divider></mat-divider>
-  <mat-list-item> 
-      <div mat-list-icon class="example-header-image"></div>
-    <h4 mat-line>Video Clip Title</h4>
-    <p mat-line>00:00 / 00:20 </p>
-  </mat-list-item>
-  <mat-divider></mat-divider>
 </mat-list>

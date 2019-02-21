@@ -1,5 +1,5 @@
 <mat-accordion class="add-headers-align">
-    <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+    <mat-expansion-panel hideToggle>
       <mat-expansion-panel-header>
         <mat-panel-title fxFlex="90">
           <h2>Video Clip Title</h2>
@@ -8,22 +8,20 @@
           <mat-icon fxFlex="10">add</mat-icon>
         </mat-panel-description>
       </mat-expansion-panel-header>
-  
-      <mat-form-field class="add-form-item">
-        <input matInput placeholder="Title">
-      </mat-form-field>
-  
-      <mat-form-field class="add-form-item">
-        <input matInput type="time" min="0" placeholder="Start">
-      </mat-form-field>
-      
-      <mat-form-field class="add-form-item">
-        <input matInput type="time" min="0" placeholder="End">
-      </mat-form-field>
-  
-      <mat-action-row>
-        <button mat-button color="accent" (click)="nextStep()">Next</button>
-      </mat-action-row>
+      <form [formGroup]="videoForm" (ngSubmit)="addVideoClip()">
+        <mat-form-field class="add-form-item">
+          <input type="text" formControlName="title" matInput placeholder="Title">
+        </mat-form-field>
+        <mat-form-field class="add-form-item">
+          <input matInput type="time" formControlName="timeStart" min="00:00:00" max="23:59:59" step="1" placeholder="Time Start">
+        </mat-form-field>
+        <mat-form-field class="add-form-item">
+          <input matInput type="time" formControlName="timeEnd" min="00:00:00" max="23:59:59" step="1" placeholder="Time End">
+        </mat-form-field>
+        <mat-action-row>
+          <button mat-raised-button type="submit" [disabled]="videoForm.invalid" color="primary">Add</button>
+        </mat-action-row>
+      </form>
     </mat-expansion-panel>
   
   </mat-accordion>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Video } from './video.model';
+import { VideoService } from './video.service';
 
 /**
  * List component
@@ -14,11 +16,17 @@ import { Component, OnInit } from '@angular/core';
 export class ListComponent implements OnInit {
 
   /**
+   * videos has a list from videos clips.
+   * @var
+   */
+  videos: Video[] = [];
+
+  /**
    * Contructor
    * 
    * @constructor
    */
-  constructor() { }
+  constructor(private videoService: VideoService) { }
 
 
   /** 
@@ -27,6 +35,7 @@ export class ListComponent implements OnInit {
    * @method ngOnInit
   */
   ngOnInit() {
+    this.videos = this.videoService.getVideoClips();
   }
 
 }

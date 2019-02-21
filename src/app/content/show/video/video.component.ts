@@ -24,4 +24,20 @@ export class VideoComponent implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   * playPauseVideo
+   * When the user make click in the full video this method
+   * is called to do the action
+   * @param el 
+   */
+
+  playPauseVideo(el: any) {
+    const video: HTMLVideoElement = el.srcElement;
+    if (!video.paused)
+      video.pause();
+    else
+      video.play();
+  }
+
+
 }

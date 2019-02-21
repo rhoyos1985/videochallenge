@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Video } from '../video.model';
+import { VideoService } from '../video.service';
 
 /**
  * This component allow to add new video clips to the list.
@@ -10,43 +13,42 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddVclipComponent implements OnInit {
   /**
-   * step number
+   * videoForm is a reactiveForm
    */
-  step:number = 0;
+  videoForm: FormGroup
   
   /**
    * Constructor
    * @constructor
    */
-  constructor() { }
+  constructor(private videoService: VideoService) { }
 
   /**
    * ngOnInit
+   * Initialized component
    * @method ngOnInit
    */
   ngOnInit() {
+    this.videoForm = new FormGroup({
+      title: new FormControl('', {validators: [Validators.required]}),
+      timeStart: new FormControl('', {validators: [Validators.required]}),
+      timeEnd: new FormControl('', {validators: [Validators.required]})
+    })
   }
 
   /**
-   * This method change the step
-   * @param index In
+   * addVideoClip
+   * Method to add video clip to the list.
    */
-  setStep(index: number) {
-    this.step = index;
-  }
+  addVideoClip() {
+    let video: Video = {
+      id: Math.round(Math.random() * 10000).toString(),
+      title: this.videoForm.value.title,
+      timeStart: this.videoForm.value.timeStart,
+      timeEnd: this.videoForm.value.timeEnd
+    }
 
-  /**
-   * nextStep
-   */
-  nextStep() {
-    this.step++;
-  }
-
-  /**
-   * prevStep
-   */
-  prevStep() {
-    this.step--;
+    this.videoService.addVideoClip(video);
   }
 
 }

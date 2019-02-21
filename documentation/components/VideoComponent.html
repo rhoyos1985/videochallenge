@@ -140,6 +140,9 @@
                             <li>
                                 <a href="#ngOnInit">ngOnInit</a>
                             </li>
+                            <li>
+                                <a href="#playPauseVideo">playPauseVideo</a>
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -226,6 +229,79 @@
                 </tr>
             </tbody>
         </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="playPauseVideo"></a>
+                        <span class="name">
+                            <b>
+                            playPauseVideo
+                            </b>
+                            <a href="#playPauseVideo"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>playPauseVideo(el: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/content/show/video/video.component.ts:34</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>playPauseVideo
+When the user make click in the full video this method
+is called to do the action</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>el</td>
+                                                        <td>
+                                                                    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 </section>
 
 
@@ -259,12 +335,28 @@ export class VideoComponent implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   * playPauseVideo
+   * When the user make click in the full video this method
+   * is called to do the action
+   * @param el 
+   */
+
+  playPauseVideo(el: any) {
+    const video: HTMLVideoElement &#x3D; el.srcElement;
+    if (!video.paused)
+      video.pause();
+    else
+      video.play();
+  }
+
+
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;video fxFlexFill preload&#x3D;&quot;auto&quot; controls&#x3D;&quot;true&quot;&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;video fxFlexFill preload&#x3D;&quot;auto&quot; controls (click)&#x3D;&quot;playPauseVideo($event)&quot;&gt;
   &lt;source src&#x3D;&quot;http://clips.vorwaerts-gmbh.de/VfE_html5.mp4&quot; type&#x3D;&quot;video/mp4&quot;/&gt;
 &lt;/video&gt;  </code></pre>
     </div>
@@ -301,7 +393,7 @@ export class VideoComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><video fxFlexFill preload="auto" controls="true">  <source src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" type="video/mp4"/></video>  </div>'
+        var COMPONENT_TEMPLATE = '<div><video fxFlexFill preload="auto" controls (click)="playPauseVideo($event)">  <source src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" type="video/mp4"/></video>  </div>'
     var COMPONENTS = [{'name': 'AddVclipComponent', 'selector': 'app-add-vclip'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ConfigComponent', 'selector': 'app-config'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'ListComponent', 'selector': 'app-list'},{'name': 'ShowComponent', 'selector': 'app-show'},{'name': 'VideoComponent', 'selector': 'app-video'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'VideoComponent'};

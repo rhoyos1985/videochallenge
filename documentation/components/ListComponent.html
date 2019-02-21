@@ -129,6 +129,20 @@
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#videos">videos</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -159,12 +173,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor()</code>
+<code>constructor(videoService: <a href="../interfaces/Video.html">VideoService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/content/list/list.component.ts:14</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/content/list/list.component.ts:22</a></div>
                             </td>
                         </tr>
 
@@ -172,6 +186,32 @@
                     <td class="col-md-4">
                             <div class="io-description"><p>Contructor</p>
 </div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>videoService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../interfaces/Video.html" target="_self" >VideoService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
                     </td>
                 </tr>
             </tbody>
@@ -209,7 +249,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/content/list/list.component.ts:29</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/content/list/list.component.ts:37</a></div>
                             </td>
                         </tr>
 
@@ -229,12 +269,58 @@
         </table>
 </section>
 
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="videos"></a>
+                        <span class="name">
+                            <b>
+                            videos</b>
+                            <a href="#videos"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/Video.html" target="_self" >Video[]</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/content/list/list.component.ts:22</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>videos has a list from videos clips.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
 
 </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { Video } from &#x27;./video.model&#x27;;
+import { VideoService } from &#x27;./video.service&#x27;;
 
 /**
  * List component
@@ -250,11 +336,17 @@
 export class ListComponent implements OnInit {
 
   /**
+   * videos has a list from videos clips.
+   * @var
+   */
+  videos: Video[] &#x3D; [];
+
+  /**
    * Contructor
    * 
    * @constructor
    */
-  constructor() { }
+  constructor(private videoService: VideoService) { }
 
 
   /** 
@@ -263,6 +355,7 @@ export class ListComponent implements OnInit {
    * @method ngOnInit
   */
   ngOnInit() {
+    this.videos &#x3D; this.videoService.getVideoClips();
   }
 
 }
@@ -271,24 +364,12 @@ export class ListComponent implements OnInit {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;mat-list class&#x3D;&quot;lists_content&quot; color&#x3D;&quot;accent&quot;&gt;
-  &lt;mat-list-item&gt;
-      &lt;div mat-list-icon class&#x3D;&quot;example-header-image&quot;&gt;&lt;/div&gt;
-    &lt;h4 mat-line&gt;Video Clip Title&lt;/h4&gt;
-    &lt;p mat-line&gt;00:00 / 00:20 &lt;/p&gt;
-  &lt;/mat-list-item&gt;
-  &lt;mat-divider&gt;&lt;/mat-divider&gt;
-  &lt;mat-list-item&gt; 
+  &lt;mat-list-item *ngFor&#x3D;&quot;let video of videos&quot;&gt;
     &lt;div mat-list-icon class&#x3D;&quot;example-header-image&quot;&gt;&lt;/div&gt;
-    &lt;h4 mat-line&gt;Video Clip Title&lt;/h4&gt;
-    &lt;p mat-line&gt;00:00 / 00:20 &lt;/p&gt;
+    &lt;h4 mat-line&gt; {{ video.title }}  &lt;/h4&gt;
+    &lt;p mat-line&gt; {{ video.timeStart }} / {{ video.timeEnd }} &lt;/p&gt;
+    &lt;mat-divider&gt;&lt;/mat-divider&gt;
   &lt;/mat-list-item&gt;
-  &lt;mat-divider&gt;&lt;/mat-divider&gt;
-  &lt;mat-list-item&gt; 
-      &lt;div mat-list-icon class&#x3D;&quot;example-header-image&quot;&gt;&lt;/div&gt;
-    &lt;h4 mat-line&gt;Video Clip Title&lt;/h4&gt;
-    &lt;p mat-line&gt;00:00 / 00:20 &lt;/p&gt;
-  &lt;/mat-list-item&gt;
-  &lt;mat-divider&gt;&lt;/mat-divider&gt;
 &lt;/mat-list&gt;</code></pre>
     </div>
 
@@ -330,7 +411,7 @@ export class ListComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><mat-list class="lists_content" color="accent">  <mat-list-item>      <div mat-list-icon class="example-header-image"></div>    <h4 mat-line>Video Clip Title</h4>    <p mat-line>00:00 / 00:20 </p>  </mat-list-item>  <mat-divider></mat-divider>  <mat-list-item>     <div mat-list-icon class="example-header-image"></div>    <h4 mat-line>Video Clip Title</h4>    <p mat-line>00:00 / 00:20 </p>  </mat-list-item>  <mat-divider></mat-divider>  <mat-list-item>       <div mat-list-icon class="example-header-image"></div>    <h4 mat-line>Video Clip Title</h4>    <p mat-line>00:00 / 00:20 </p>  </mat-list-item>  <mat-divider></mat-divider></mat-list></div>'
+        var COMPONENT_TEMPLATE = '<div><mat-list class="lists_content" color="accent">  <mat-list-item *ngFor="let video of videos">    <div mat-list-icon class="example-header-image"></div>    <h4 mat-line> {{ video.title }}  </h4>    <p mat-line> {{ video.timeStart }} / {{ video.timeEnd }} </p>    <mat-divider></mat-divider>  </mat-list-item></mat-list></div>'
     var COMPONENTS = [{'name': 'AddVclipComponent', 'selector': 'app-add-vclip'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ConfigComponent', 'selector': 'app-config'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'ListComponent', 'selector': 'app-list'},{'name': 'ShowComponent', 'selector': 'app-show'},{'name': 'VideoComponent', 'selector': 'app-video'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ListComponent'};
