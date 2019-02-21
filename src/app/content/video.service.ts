@@ -1,10 +1,16 @@
 import { Video } from './video.model';
+import { Injectable } from '@angular/core';
+import { Store } from '@ngrx/store';
+
+import * as VideoActions from './video.actions';
+import * as fromRoot from '../app.reducer';
 
 /**
  * Video service
  * This class is a manager from video clips and it has some method
  * that allow to add, modify and delete video clips from the list
  */
+@Injectable()
 export class VideoService {
     /**
      * Temporal lists from videoclips
@@ -20,6 +26,8 @@ export class VideoService {
      */
     private runningVideo: Video;
 
+    constructor(private store: Store<fromRoot.State>) {}
+
     /**
      * addVideoClip
      * To add video clips to the list
@@ -27,9 +35,14 @@ export class VideoService {
      * @param addVideo 
      */
     addVideoClip(addVideo: Video) {
-        console.log(addVideo);
         this.videoClips.push(addVideo);
-        console.log(this.videoClips);
+        this.store.dispatch(new VideoActions.SetVideoClips(this.videoClips));
+    }
+
+    removeVideoClip(video: Video) {
+        const indexVideo = this.videoClips.indexOf(video);
+        this.videoClips.splice(indexVideo,1);
+        this.store.dispatch(new VideoActions.SetVideoClips(this.videoClips));
     }
 
     /**
@@ -38,7 +51,8 @@ export class VideoService {
      * Return all video clips to the list
      */
     getVideoClips() {
-        return this.videoClips.slice();
+        this.store.dispatch(new VideoActions.SetVideoClips(this.videoClips));
+        this.playVideo(this.videoClips[0].id);
     }
 
     /**
@@ -47,6 +61,6 @@ export class VideoService {
      * @param videoId 
      */
     playVideo(videoId: string) {
-        this.runningVideo = this.videoClips.find(video => video.id === videoId);
+        this.store.dispatch(new VideoActions.StartVideo(videoId))
     }
 }

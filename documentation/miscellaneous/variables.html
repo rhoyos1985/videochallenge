@@ -57,7 +57,43 @@
                 <td class="col-md-4">
                     <ul class="index-list">
                         <li>
-                            <a href="#environment" title="src/environments/environment.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(src/.../environment.ts)</a>
+                            <a href="#getActiveVideo" title="src/app/app.reducer.ts"><b>getActiveVideo</b>&nbsp;&nbsp;&nbsp;(src/.../app.reducer.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#getActiveVideo" title="src/app/content/video.reducer.ts"><b>getActiveVideo</b>&nbsp;&nbsp;&nbsp;(src/.../video.reducer.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#getFinishedVideo" title="src/app/app.reducer.ts"><b>getFinishedVideo</b>&nbsp;&nbsp;&nbsp;(src/.../app.reducer.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#getFinishedVideo" title="src/app/content/video.reducer.ts"><b>getFinishedVideo</b>&nbsp;&nbsp;&nbsp;(src/.../video.reducer.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#getVideoClips" title="src/app/app.reducer.ts"><b>getVideoClips</b>&nbsp;&nbsp;&nbsp;(src/.../app.reducer.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#getVideoClips" title="src/app/content/video.reducer.ts"><b>getVideoClips</b>&nbsp;&nbsp;&nbsp;(src/.../video.reducer.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#getVideoState" title="src/app/app.reducer.ts"><b>getVideoState</b>&nbsp;&nbsp;&nbsp;(src/.../app.reducer.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#initialState" title="src/app/content/video.reducer.ts"><b>initialState</b>&nbsp;&nbsp;&nbsp;(src/.../video.reducer.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#reducers" title="src/app/app.reducer.ts"><b>reducers</b>&nbsp;&nbsp;&nbsp;(src/.../app.reducer.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#SET_FINISHED_VIDEO" title="src/app/content/video.actions.ts"><b>SET_FINISHED_VIDEO</b>&nbsp;&nbsp;&nbsp;(src/.../video.actions.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#SET_VIDEO_CLIPS" title="src/app/content/video.actions.ts"><b>SET_VIDEO_CLIPS</b>&nbsp;&nbsp;&nbsp;(src/.../video.actions.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#START_VIDEO" title="src/app/content/video.actions.ts"><b>START_VIDEO</b>&nbsp;&nbsp;&nbsp;(src/.../video.actions.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#STOP_VIDEO" title="src/app/content/video.actions.ts"><b>STOP_VIDEO</b>&nbsp;&nbsp;&nbsp;(src/.../video.actions.ts)</a>
                         </li>
                     </ul>
                 </td>
@@ -66,34 +102,323 @@
     </table>
 </section>
 
-    <h3>src/environments/environment.ts</h3>
+    <h3>src/app/app.reducer.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="environment"></a>
+                        <a name="getActiveVideo"></a>
                         <span class="name">
                             <b>
-                            environment</b>
-                            <a href="#environment"><span class="icon ion-ios-link"></span></a>
+                            getActiveVideo</b>
+                            <a href="#getActiveVideo"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+                            <i>Default value : </i><code>createSelector(getVideoState, fromVideo.getActiveVideo)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getFinishedVideo"></a>
+                        <span class="name">
+                            <b>
+                            getFinishedVideo</b>
+                            <a href="#getFinishedVideo"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>createSelector(getVideoState, fromVideo.getFinishedVideo)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getVideoClips"></a>
+                        <span class="name">
+                            <b>
+                            getVideoClips</b>
+                            <a href="#getVideoClips"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>createSelector(getVideoState, fromVideo.getVideoClips)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getVideoState"></a>
+                        <span class="name">
+                            <b>
+                            getVideoState</b>
+                            <a href="#getVideoState"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>createFeatureSelector&lt;fromVideo.State&gt;(&#x27;video&#x27;)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="reducers"></a>
+                        <span class="name">
+                            <b>
+                            reducers</b>
+                            <a href="#reducers"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/State.html" target="_self" >ActionReducerMap&lt;State&gt;</a></code>
 
                         </td>
                     </tr>
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>{
-  /**
-   * @ignore
-   */
-  production: false
+    video: fromVideo.videoReducer
 }</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/app/content/video.reducer.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getActiveVideo"></a>
+                        <span class="name">
+                            <b>
+                            getActiveVideo</b>
+                            <a href="#getActiveVideo"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(state: State) &#x3D;&gt; &#x60;http://clips.vorwaerts-gmbh.de/VfE_html5.mp4#t&#x3D;${state.activeVideo.timeStart},${state.activeVideo.timeEnd}&#x60;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getFinishedVideo"></a>
+                        <span class="name">
+                            <b>
+                            getFinishedVideo</b>
+                            <a href="#getFinishedVideo"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(state: State) &#x3D;&gt; state.finishedVideo</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getVideoClips"></a>
+                        <span class="name">
+                            <b>
+                            getVideoClips</b>
+                            <a href="#getVideoClips"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(state: State) &#x3D;&gt; state.videoClips</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="initialState"></a>
+                        <span class="name">
+                            <b>
+                            initialState</b>
+                            <a href="#initialState"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/State.html" target="_self" >State</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    videoClips: [],
+    finishedVideo: [],
+    activeVideo: null
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/app/content/video.actions.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="SET_FINISHED_VIDEO"></a>
+                        <span class="name">
+                            <b>
+                            SET_FINISHED_VIDEO</b>
+                            <a href="#SET_FINISHED_VIDEO"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;[Video] Set Finished Video clip&#x27;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="SET_VIDEO_CLIPS"></a>
+                        <span class="name">
+                            <b>
+                            SET_VIDEO_CLIPS</b>
+                            <a href="#SET_VIDEO_CLIPS"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;[Video] Set Video Clips&#x27;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="START_VIDEO"></a>
+                        <span class="name">
+                            <b>
+                            START_VIDEO</b>
+                            <a href="#START_VIDEO"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;[Video] Start Video Clip&#x27;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="STOP_VIDEO"></a>
+                        <span class="name">
+                            <b>
+                            STOP_VIDEO</b>
+                            <a href="#STOP_VIDEO"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;[Video] Stop Video Clip&#x27;</code>
                         </td>
                     </tr>
 

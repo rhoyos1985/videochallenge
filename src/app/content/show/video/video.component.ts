@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import * as fromRoot from '../../../app.reducer';
 
 /**
  * This component has the video tag to show the full video.
@@ -11,17 +13,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VideoComponent implements OnInit {
 
+  video$: Observable<string>;
+
   /**
    * Constructor
    * @constructor
    */
-  constructor() { }
+  constructor(private store: Store<fromRoot.State>) { }
 
   /**
    * ngOnInit
    * @method ngOnInit
    */
   ngOnInit() {
+    this.video$ = this.store.select(fromRoot.getActiveVideo);
   }
 
   /**

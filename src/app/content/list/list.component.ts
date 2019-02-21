@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Video } from './video.model';
-import { VideoService } from './video.service';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { Video } from '../video.model';
+import { VideoService } from '../video.service';
+
+import * as fromRoot from '../../app.reducer';
 
 /**
  * List component
@@ -21,12 +25,15 @@ export class ListComponent implements OnInit {
    */
   videos: Video[] = [];
 
+  videoClips$: Observable<Video[]>
+
   /**
    * Contructor
    * 
    * @constructor
    */
-  constructor(private videoService: VideoService) { }
+  constructor(private videoService: VideoService,
+              private store: Store<fromRoot.State>) { }
 
 
   /** 
@@ -35,7 +42,20 @@ export class ListComponent implements OnInit {
    * @method ngOnInit
   */
   ngOnInit() {
-    this.videos = this.videoService.getVideoClips();
+    this.getVideoClips();
+    this.subscribeService();
+  }
+
+  subscribeService() {
+    this.videoClips$ = this.store.select(fromRoot.getVideoClips)
+  }
+
+  getVideoClips() {
+    this.videoService.getVideoClips();
+  }
+
+  removeVideo(video: Video) {
+    this.videoService.removeVideoClip(video);
   }
 
 }

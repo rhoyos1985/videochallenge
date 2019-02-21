@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { Video } from '../video.model';
-import { VideoService } from '../video.service';
+import { Video } from '../../video.model';
+import { VideoService } from '../../video.service';
 
 /**
  * This component allow to add new video clips to the list.

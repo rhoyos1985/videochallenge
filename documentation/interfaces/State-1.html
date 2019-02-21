@@ -43,7 +43,7 @@
 
 <ol class="breadcrumb">
   <li>Interfaces</li>
-  <li>Video</li>
+  <li>State</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,17 +61,9 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/content/video.model.ts</code>
+            <code>src/app/content/video.reducer.ts</code>
         </p>
 
-            <p class="comment">
-                <h3>Description</h3>
-            </p>
-            <p class="comment">
-                <p>Video Interface
-It is a estruct to video clips</p>
-
-            </p>
 
 
         <section>
@@ -87,16 +79,13 @@ It is a estruct to video clips</p>
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                        <a href="#id">id</a>
+                                        <a href="#activeVideo">activeVideo</a>
                                 </li>
                                 <li>
-                                        <a href="#timeEnd">timeEnd</a>
+                                        <a href="#finishedVideo">finishedVideo</a>
                                 </li>
                                 <li>
-                                        <a href="#timeStart">timeStart</a>
-                                </li>
-                                <li>
-                                        <a href="#title">title</a>
+                                        <a href="#videoClips">videoClips</a>
                                 </li>
                             </ul>
                         </td>
@@ -113,13 +102,13 @@ It is a estruct to video clips</p>
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="id"></a>
-                                        <span class="name"><b>id</b><a href="#id"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="activeVideo"></a>
+                                        <span class="name"><b>activeVideo</b><a href="#activeVideo"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>id:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>activeVideo:     <code><a href="../interfaces/Video.html" target="_self" >Video</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -127,7 +116,7 @@ It is a estruct to video clips</p>
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            <i>Type : </i>    <code><a href="../interfaces/Video.html" target="_self" >Video</a></code>
 
                                         </td>
                                     </tr>
@@ -136,25 +125,19 @@ It is a estruct to video clips</p>
 
 
 
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>id video clip</p>
-</div>
-                                </td>
-                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="timeEnd"></a>
-                                        <span class="name"><b>timeEnd</b><a href="#timeEnd"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="finishedVideo"></a>
+                                        <span class="name"><b>finishedVideo</b><a href="#finishedVideo"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>timeEnd:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>finishedVideo:     <code><a href="../interfaces/Video.html" target="_self" >Video[]</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -162,7 +145,7 @@ It is a estruct to video clips</p>
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            <i>Type : </i>    <code><a href="../interfaces/Video.html" target="_self" >Video[]</a></code>
 
                                         </td>
                                     </tr>
@@ -171,25 +154,19 @@ It is a estruct to video clips</p>
 
 
 
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>timeEnd video clip</p>
-</div>
-                                </td>
-                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="timeStart"></a>
-                                        <span class="name"><b>timeStart</b><a href="#timeStart"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="videoClips"></a>
+                                        <span class="name"><b>videoClips</b><a href="#videoClips"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>timeStart:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>videoClips:     <code><a href="../interfaces/Video.html" target="_self" >Video[]</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -197,7 +174,7 @@ It is a estruct to video clips</p>
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            <i>Type : </i>    <code><a href="../interfaces/Video.html" target="_self" >Video[]</a></code>
 
                                         </td>
                                     </tr>
@@ -206,47 +183,6 @@ It is a estruct to video clips</p>
 
 
 
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>timeStart video clip</p>
-</div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="title"></a>
-                                        <span class="name"><b>title</b><a href="#title"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>title:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                                        </td>
-                                    </tr>
-
-
-
-
-
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>title video clip</p>
-</div>
-                                </td>
-                            </tr>
                         </tbody>
                     </table>
             </section>
@@ -254,24 +190,58 @@ It is a estruct to video clips</p>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export interface Video {
-    /**
-     * id video clip
-     */
-    id: string,
-    /**
-     * title video clip
-     */
-    title: string,
-    /**
-     * timeStart video clip
-     */
-    timeStart: string,
-    /**
-     * timeEnd video clip
-     */
-    timeEnd: string
-}</code></pre>
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+    VideoActions,
+    SET_VIDEO_CLIPS,
+    SET_FINISHED_VIDEO,
+    START_VIDEO,
+    STOP_VIDEO
+} from &#x27;./video.actions&#x27;;
+import { Video } from &#x27;./video.model&#x27;;
+
+export interface State {
+    videoClips: Video[];
+    finishedVideo: Video[]
+    activeVideo: Video;
+}
+
+const initialState: State &#x3D; {
+    videoClips: [],
+    finishedVideo: [],
+    activeVideo: null
+}
+
+export function videoReducer(state &#x3D; initialState, action: VideoActions) {
+    switch (action.type) {
+        case SET_VIDEO_CLIPS:
+            return{
+                ...state,
+                videoClips: action.payload
+            }
+        case SET_FINISHED_VIDEO:
+            return {
+                ...state,
+                finishedVideo: action.payload
+            }
+        case START_VIDEO:
+            return {
+                ...state,
+                activeVideo: { ...state.videoClips.find(ex &#x3D;&gt; ex.id &#x3D;&#x3D;&#x3D; action.payload) }
+            };
+        case STOP_VIDEO:
+            return {
+                ...state,
+                activeVideo: null
+            };
+        default: {
+            return state;
+        }
+    }
+}
+
+export const getVideoClips &#x3D; (state: State) &#x3D;&gt; state.videoClips;
+export const getFinishedVideo &#x3D; (state: State) &#x3D;&gt; state.finishedVideo;
+export const getActiveVideo &#x3D; (state: State) &#x3D;&gt; &#x60;http://clips.vorwaerts-gmbh.de/VfE_html5.mp4#t&#x3D;${state.activeVideo.timeStart},${state.activeVideo.timeEnd}&#x60;;</code></pre>
     </div>
 </div>
 
@@ -297,7 +267,7 @@ It is a estruct to video clips</p>
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
-            var COMPODOC_CURRENT_PAGE_URL = 'Video.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'State-1.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>
