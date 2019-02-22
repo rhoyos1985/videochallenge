@@ -54,6 +54,10 @@ export class ListComponent implements OnInit {
     this.videoService.getVideoClips();
   }
 
+  playVideo(video) {
+    this.videoService.playVideo(video.id);
+  }
+
   removeVideo(video: Video) {
     this.videoService.removeVideoClip(video);
   }

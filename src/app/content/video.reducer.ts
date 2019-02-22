@@ -49,4 +49,4 @@ export function videoReducer(state = initialState, action: VideoActions) {
 
 export const getVideoClips = (state: State) => state.videoClips;
 export const getFinishedVideo = (state: State) => state.finishedVideo;
-export const getActiveVideo = (state: State) => `http://clips.vorwaerts-gmbh.de/VfE_html5.mp4#t=${state.activeVideo.timeStart},${state.activeVideo.timeEnd}`;
+export const getActiveVideo = (state: State) => state.activeVideo.url;

@@ -45,7 +45,8 @@ export class AddVclipComponent implements OnInit {
       id: Math.round(Math.random() * 10000).toString(),
       title: this.videoForm.value.title,
       timeStart: this.videoForm.value.timeStart,
-      timeEnd: this.videoForm.value.timeEnd
+      timeEnd: this.videoForm.value.timeEnd,
+      url: `http://clips.vorwaerts-gmbh.de/VfE_html5.mp4#t=${this.videoForm.value.timeStart},${this.videoForm.value.timeEnd}`
     }
 
     this.videoService.addVideoClip(video);
