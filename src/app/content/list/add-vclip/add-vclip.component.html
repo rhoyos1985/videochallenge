@@ -1,0 +1,27 @@
+<mat-accordion class="add-headers-align">
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title fxFlex="90">
+          <h2>{{ title }}</h2>
+        </mat-panel-title>
+        <mat-panel-description>
+          <mat-icon fxFlex="10">add</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <form [formGroup]="videoForm" (ngSubmit)="addVideoClip()">
+        <mat-form-field class="add-form-item">
+          <input type="text" formControlName="title" matInput placeholder="Title">
+        </mat-form-field>
+        <mat-form-field class="add-form-item">
+          <input matInput type="time" formControlName="timeStart" min="00:00:00" max="23:59:59" step="1" placeholder="Time Start">
+        </mat-form-field>
+        <mat-form-field class="add-form-item">
+          <input matInput type="time" formControlName="timeEnd" min="00:00:00" max="23:59:59" step="1" placeholder="Time End">
+        </mat-form-field>
+        <mat-action-row>
+          <button mat-raised-button type="submit" [disabled]="videoForm.invalid" color="primary">Add</button>
+        </mat-action-row>
+      </form>
+    </mat-expansion-panel>
+  
+  </mat-accordion>

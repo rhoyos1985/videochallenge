@@ -1,0 +1,11 @@
+<mat-action-list >
+  <div fxLayout="row" *ngFor="let video of (videoClips$ | async)">
+      <button mat-list-item (click)="playVideo(video)" fxFlex="80">  
+        <h4 mat-line> {{ video.title }}  </h4>
+        <p mat-line> {{ video.timeStart }} / {{ video.timeEnd }} </p>
+        <video width="100" height="100" [src]="video.url"></video> 
+      </button>
+      <button (click)="removeVideo(video)" mat-list-item fxFlex="20"><mat-icon>clear</mat-icon></button>
+      <mat-divider></mat-divider>
+  </div>
+</mat-action-list>
