@@ -27,70 +27,143 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content module">
+               <div class="content interface">
                    <div class="content-data">
 
 
 
+
+
+
+
+
+
+
+
+
 <ol class="breadcrumb">
-    <li>Modules</li>
-    <li>AppRoutingModule</li>
+  <li>Interfaces</li>
+  <li>State</li>
 </ol>
 
-
 <ul class="nav nav-tabs" role="tablist">
-    <li  class="active" >
-        <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
-    </li>
-    <li >
-        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-    </li>
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
 </ul>
 
 <div class="tab-content">
     <div class="tab-pane fade active in" id="c-info">
-
         <p class="comment">
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/app-routing.module.ts</code>
+            <code>src/app/content/video.reducer.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>State interface to update some components</p>
+
+            </p>
 
 
 
-        <div class="container-fluid module">
-            <div class="row">
-            </div>
-        </div>
 
 
     </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
-import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+    VideoActions,
+    SET_VIDEO_CLIPS,
+    SET_FINISHED_VIDEO,
+    START_VIDEO,
+    STOP_VIDEO
+} from &#x27;./video.actions&#x27;;
+import { Video } from &#x27;./video.model&#x27;;
 
-const routes: Routes &#x3D; [];
+/**
+ * State interface to update some components
+ */
+export interface State {
+    /**
+     * @ignore
+     */
+    videoClips: Video[];
+    /**
+     * @ignore
+     */
+    finishedVideo: Video[]
+    /**
+     * @ignore
+     */
+    activeVideo: Video;
+}
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
-</code></pre>
+/**
+ * Initialize State
+ */
+const initialState: State &#x3D; {
+    videoClips: [],
+    finishedVideo: [],
+    activeVideo: null
+}
+
+/**
+ * This reducer allows to evaluate the actions
+ */
+export function videoReducer(state &#x3D; initialState, action: VideoActions) {
+    switch (action.type) {
+        case SET_VIDEO_CLIPS:
+            return{
+                ...state,
+                videoClips: action.payload
+            }
+        case SET_FINISHED_VIDEO:
+            return {
+                ...state,
+                finishedVideo: action.payload
+            }
+        case START_VIDEO:
+            return {
+                ...state,
+                activeVideo: { ...state.videoClips.find(ex &#x3D;&gt; ex.id &#x3D;&#x3D;&#x3D; action.payload) }
+            };
+        case STOP_VIDEO:
+            return {
+                ...state,
+                activeVideo: null
+            };
+        default: {
+            return state;
+        }
+    }
+}
+
+/**
+ * getVideoClips has all video clips 
+ * @param state 
+ */
+export const getVideoClips &#x3D; (state: State) &#x3D;&gt; state.videoClips;
+/**
+ * getFinishedVideo is to know when the video has finished
+ * @param state 
+ */
+export const getFinishedVideo &#x3D; (state: State) &#x3D;&gt; state.finishedVideo;
+/**
+ * getActiveVideo has the video is running
+ * @param state 
+ */
+export const getActiveVideo &#x3D; (state: State) &#x3D;&gt; state.activeVideo;</code></pre>
     </div>
 </div>
-
-
-
-
-
-
-
-
 
 
 
@@ -113,8 +186,8 @@ export class AppRoutingModule { }
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
-            var COMPODOC_CURRENT_PAGE_URL = 'AppRoutingModule.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
+            var COMPODOC_CURRENT_PAGE_URL = 'State-1.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

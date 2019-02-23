@@ -19,5 +19,9 @@ export interface Video {
     /**
      * timeEnd video clip
      */
-    timeEnd: string
+    timeEnd: string,
+    /**
+     * url
+     */
+    url: string
 }
