@@ -3,12 +3,14 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1.
 
 ## Install
-Clone the [repository]{https://github.com/rhoyos1985/videochallenge} 
-https: https://github.com/rhoyos1985/videochallenge.git
-SSH: git@github.com:rhoyos1985/videochallenge.git
+Clone the [repository](https://github.com/rhoyos1985/videochallenge) 
+- https: https://github.com/rhoyos1985/videochallenge.git
+- SSH: git@github.com:rhoyos1985/videochallenge.git
 
 ```console
 git clone <REPOSITORY>
+cd videochallenge
+npm install
 ```
 
 ## Development server
