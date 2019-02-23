@@ -22,23 +22,32 @@ export class VideoService {
     ];
 
     /**
-     * Show the video clip as full video
+     * Initizalice the store
+     * @param store 
      */
-    private runningVideo: Video;
-
     constructor(private store: Store<fromRoot.State>) {}
 
     /**
-     * addVideoClip
      * To add video clips to the list
-     * 
-     * @param addVideo 
+     * @method
+     * addVideoClip
+     * @param addVideo
+     * @example
+     * addVideoClip(video);
      */
     addVideoClip(addVideo: Video) {
         this.videoClips.push(addVideo);
         this.store.dispatch(new VideoActions.SetVideoClips(this.videoClips));
     }
 
+    /**
+     * To remove video clips from the list
+     * @method
+     * removeVideoClip
+     * @param video
+     * @example
+     * removeVideoClip(video);
+     */
     removeVideoClip(video: Video) {
         const indexVideo = this.videoClips.indexOf(video);
         this.videoClips.splice(indexVideo,1);
@@ -46,9 +55,11 @@ export class VideoService {
     }
 
     /**
+     * Return all video clips to the list 
+     * @method
      * getVideoClips
-     * 
-     * Return all video clips to the list
+     * @example
+     * getVideoClips();
      */
     getVideoClips() {
         this.store.dispatch(new VideoActions.SetVideoClips(this.videoClips));
@@ -56,9 +67,12 @@ export class VideoService {
     }
 
     /**
-     * playVideo
      * This method is executed when the user make click on the video clip
-     * @param videoId 
+     * @method
+     * playVideo
+     * @param videoId
+     * @example
+     * playVideo(id); 
      */
     playVideo(videoId: string) {
         this.store.dispatch(new VideoActions.StartVideo(videoId))

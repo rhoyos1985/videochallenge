@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>My app documentation</title>
+        <title>VideoChallengeDoc</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,7 +13,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">My app documentation</a>
+            <a href="../" class="navbar-brand">VideoChallengeDoc</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -64,128 +64,18 @@
             <code>src/app/content/video.reducer.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>State interface to update some components</p>
 
-
-        <section>
-            <h3 id="index">Index</h3>
-            <table class="table table-sm table-bordered index-table">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <h6><b>Properties</b></h6>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <ul class="index-list">
-                                <li>
-                                        <a href="#activeVideo">activeVideo</a>
-                                </li>
-                                <li>
-                                        <a href="#finishedVideo">finishedVideo</a>
-                                </li>
-                                <li>
-                                        <a href="#videoClips">videoClips</a>
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-
-
-            <section>
-                <h3 id="inputs">Properties</h3>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="activeVideo"></a>
-                                        <span class="name"><b>activeVideo</b><a href="#activeVideo"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>activeVideo:     <code><a href="../interfaces/Video.html" target="_self" >Video</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="../interfaces/Video.html" target="_self" >Video</a></code>
-
-                                        </td>
-                                    </tr>
+            </p>
 
 
 
 
 
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="finishedVideo"></a>
-                                        <span class="name"><b>finishedVideo</b><a href="#finishedVideo"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>finishedVideo:     <code><a href="../interfaces/Video.html" target="_self" >Video[]</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="../interfaces/Video.html" target="_self" >Video[]</a></code>
-
-                                        </td>
-                                    </tr>
-
-
-
-
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="videoClips"></a>
-                                        <span class="name"><b>videoClips</b><a href="#videoClips"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>videoClips:     <code><a href="../interfaces/Video.html" target="_self" >Video[]</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="../interfaces/Video.html" target="_self" >Video[]</a></code>
-
-                                        </td>
-                                    </tr>
-
-
-
-
-
-                        </tbody>
-                    </table>
-            </section>
     </div>
 
 
@@ -199,18 +89,36 @@
 } from &#x27;./video.actions&#x27;;
 import { Video } from &#x27;./video.model&#x27;;
 
+/**
+ * State interface to update some components
+ */
 export interface State {
+    /**
+     * @ignore
+     */
     videoClips: Video[];
+    /**
+     * @ignore
+     */
     finishedVideo: Video[]
+    /**
+     * @ignore
+     */
     activeVideo: Video;
 }
 
+/**
+ * Initialize State
+ */
 const initialState: State &#x3D; {
     videoClips: [],
     finishedVideo: [],
     activeVideo: null
 }
 
+/**
+ * This reducer allows to evaluate the actions
+ */
 export function videoReducer(state &#x3D; initialState, action: VideoActions) {
     switch (action.type) {
         case SET_VIDEO_CLIPS:
@@ -239,9 +147,21 @@ export function videoReducer(state &#x3D; initialState, action: VideoActions) {
     }
 }
 
+/**
+ * getVideoClips has all video clips 
+ * @param state 
+ */
 export const getVideoClips &#x3D; (state: State) &#x3D;&gt; state.videoClips;
+/**
+ * getFinishedVideo is to know when the video has finished
+ * @param state 
+ */
 export const getFinishedVideo &#x3D; (state: State) &#x3D;&gt; state.finishedVideo;
-export const getActiveVideo &#x3D; (state: State) &#x3D;&gt; &#x60;http://clips.vorwaerts-gmbh.de/VfE_html5.mp4#t&#x3D;${state.activeVideo.timeStart},${state.activeVideo.timeEnd}&#x60;;</code></pre>
+/**
+ * getActiveVideo has the video is running
+ * @param state 
+ */
+export const getActiveVideo &#x3D; (state: State) &#x3D;&gt; state.activeVideo;</code></pre>
     </div>
 </div>
 

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>My app documentation</title>
+        <title>VideoChallengeDoc</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,7 +13,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">My app documentation</a>
+            <a href="../" class="navbar-brand">VideoChallengeDoc</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -137,7 +137,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#video$">video$</a>
+                                <a href="#videoplayer">videoplayer</a>
                             </li>
                         </ul>
                     </td>
@@ -156,6 +156,9 @@
                             </li>
                             <li>
                                 <a href="#playPauseVideo">playPauseVideo</a>
+                            </li>
+                            <li>
+                                <a href="#videoRuning">videoRuning</a>
                             </li>
                         </ul>
                     </td>
@@ -180,7 +183,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/content/show/video/video.component.ts:16</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/content/show/video/video.component.ts:20</a></div>
                             </td>
                         </tr>
 
@@ -251,14 +254,14 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/content/show/video/video.component.ts:28</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/content/show/video/video.component.ts:33</a></div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
-                            <div class="io-description"><p>ngOnInit</p>
+                            <div class="io-description"><p>This method allow to subscribe the store when the component was create</p>
 </div>
 
                             <div class="io-description">
@@ -284,14 +287,14 @@
                 </tr>
                 <tr>
                     <td class="col-md-4">
-<code>playPauseVideo(el: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+<code>playPauseVideo(videoRun: <a href="../interfaces/Video.html">Video</a>)</code>
                     </td>
                 </tr>
 
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/content/show/video/video.component.ts:39</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">src/app/content/show/video/video.component.ts:62</a></div>
                             </td>
                         </tr>
 
@@ -315,9 +318,9 @@ is called to do the action</p>
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>el</td>
+                                                        <td>videoRun</td>
                                                         <td>
-                                                                    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                                                    <code><a href="../interfaces/Video.html" target="_self" >Video</a></code>
                                                         </td>
                                                     
                                                     <td>
@@ -330,6 +333,60 @@ is called to do the action</p>
                                     </table>
                             </div>
                             <div>
+                                    <b>Example :</b>
+                                        <div>
+                                            <pre class="line-numbers"><code class="language-html">playPauseVideo(videoRun);</code></pre>
+                                        </div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="videoRuning"></a>
+                        <span class="name">
+                            <b>
+                            videoRuning
+                            </b>
+                            <a href="#videoRuning"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>videoRuning()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/content/show/video/video.component.ts:46</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>videoRuning
+this method susbcribe the videoActive</p>
+</div>
+
+                            <div>
+                                    <b>Example :</b>
+                                        <div>
+                                            <pre class="line-numbers"><code class="language-html">videoRuning();</code></pre>
+                                        </div>
                             </div>
                             <div class="io-description">
                                 <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -353,26 +410,41 @@ is called to do the action</p>
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="video$"></a>
+                        <a name="videoplayer"></a>
                         <span class="name">
                             <b>
-                            video$</b>
-                            <a href="#video$"><span class="icon ion-ios-link"></span></a>
+                            videoplayer</b>
+                            <a href="#videoplayer"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code>Observable&lt;string&gt;</code>
+                            <i>Type : </i>    <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;videoPlayer&#x27;)<br />
+                            </code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/content/show/video/video.component.ts:16</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/content/show/video/video.component.ts:20</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>It is a reference from video tag.</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -382,10 +454,12 @@ is called to do the action</p>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
-import { Store } from &#x27;@ngrx/store&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, ViewChild, ElementRef } from &#x27;@angular/core&#x27;;
+import { Store, select } from &#x27;@ngrx/store&#x27;;
 import { Observable } from &#x27;rxjs&#x27;;
+import { filter } from &#x27;rxjs/operators&#x27;;
 import * as fromRoot from &#x27;../../../app.reducer&#x27;;
+import { Video } from &#x27;../../video.model&#x27;;
 
 /**
  * This component has the video tag to show the full video.
@@ -395,9 +469,11 @@ import * as fromRoot from &#x27;../../../app.reducer&#x27;;
   templateUrl: &#x27;./video.component.html&#x27;,
   styleUrls: [&#x27;./video.component.scss&#x27;]
 })
-export class VideoComponent implements OnInit {
-
-  video$: Observable&lt;string&gt;;
+export class VideoComponent implements OnInit{
+  /**
+   * It is a reference from video tag.
+   */
+  @ViewChild(&#x27;videoPlayer&#x27;) videoplayer: ElementRef;
 
   /**
    * Constructor
@@ -406,36 +482,56 @@ export class VideoComponent implements OnInit {
   constructor(private store: Store&lt;fromRoot.State&gt;) { }
 
   /**
+   * This method allow to subscribe the store when the component was create
+   * @method 
    * ngOnInit
-   * @method ngOnInit
    */
   ngOnInit() {
-    this.video$ &#x3D; this.store.select(fromRoot.getActiveVideo);
+    this.videoRuning();
+  }
+
+  /**
+   * videoRuning
+   * this method susbcribe the videoActive
+   * @method 
+   * videoRuning
+   * @example
+   * videoRuning();
+   * 
+   */
+  videoRuning() {
+    this.store
+        .pipe(select(fromRoot.getActiveVideo), filter(val &#x3D;&gt; val !&#x3D;&#x3D; null))
+        .subscribe(video &#x3D;&gt; {
+          this.playPauseVideo(video);
+        })
   }
 
   /**
    * playPauseVideo
    * When the user make click in the full video this method
    * is called to do the action
-   * @param el 
+   * @param el
+   * @example
+   *  playPauseVideo(videoRun);
    */
-
-  playPauseVideo(el: any) {
-    const video: HTMLVideoElement &#x3D; el.srcElement;
+  playPauseVideo(videoRun: Video) {
+    const video &#x3D; this.videoplayer.nativeElement;
+    video.src&#x3D;videoRun.url;
+    video.load();
     if (!video.paused)
       video.pause();
     else
       video.play();
   }
 
-
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;video fxFlexFill preload&#x3D;&quot;auto&quot; controls (click)&#x3D;&quot;playPauseVideo($event)&quot;&gt;
-  &lt;source [src]&#x3D;&quot;(video$ | async)&quot; type&#x3D;&quot;video/mp4&quot;/&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;video fxFlexFill preload autoplay controls (click)&#x3D;&quot;playPauseVideo($event)&quot; #videoPlayer&gt;
+  &lt;source [src]&#x3D;&quot;&quot; type&#x3D;&quot;video/mp4&quot;/&gt;
 &lt;/video&gt;  </code></pre>
     </div>
 
@@ -471,7 +567,7 @@ export class VideoComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><video fxFlexFill preload="auto" controls (click)="playPauseVideo($event)">  <source [src]="(video$ | async)" type="video/mp4"/></video>  </div>'
+        var COMPONENT_TEMPLATE = '<div><video fxFlexFill preload autoplay controls (click)="playPauseVideo($event)" #videoPlayer>  <source [src]="" type="video/mp4"/></video>  </div>'
     var COMPONENTS = [{'name': 'AddVclipComponent', 'selector': 'app-add-vclip'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ConfigComponent', 'selector': 'app-config'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'ListComponent', 'selector': 'app-list'},{'name': 'ShowComponent', 'selector': 'app-show'},{'name': 'VideoComponent', 'selector': 'app-video'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'VideoComponent'};

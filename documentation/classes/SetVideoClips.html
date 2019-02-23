@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>My app documentation</title>
+        <title>VideoChallengeDoc</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,7 +13,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">My app documentation</a>
+            <a href="../" class="navbar-brand">VideoChallengeDoc</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -63,6 +63,13 @@
             <code>src/app/content/video.actions.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>This actions is executed when it is adding a video</p>
+
+            </p>
 
 
             <p class="comment">
@@ -72,6 +79,11 @@
                         <code>Action</code>
             </p>
 
+            <p class="comment">
+                <h3>Example</h3>
+            </p>
+            <div class="io-description">
+            </div>
 
             <section>
     <h3 id="index">Index</h3>
@@ -117,12 +129,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/content/video.actions.ts:10</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/content/video.actions.ts:30</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Initialize a payload</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -181,7 +195,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/content/video.actions.ts:11</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/content/video.actions.ts:35</a></div>
                             </td>
                         </tr>
 
@@ -208,10 +222,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/content/video.actions.ts:10</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/content/video.actions.ts:30</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Describe the action that allow</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -230,31 +250,89 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Action } from &#x27;@ngrx/store&#x27;;
 import { Video } from &#x27;./video.model&#x27;;
 
+/**
+ * @ignore
+ */
 export const SET_VIDEO_CLIPS &#x3D; &#x27;[Video] Set Video Clips&#x27;;
+/**
+ * @ignore
+ */
 export const SET_FINISHED_VIDEO &#x3D; &#x27;[Video] Set Finished Video clip&#x27;;
+/**
+ * @ignore
+ */
 export const START_VIDEO &#x3D; &#x27;[Video] Start Video Clip&#x27;;
+/**
+ * @ignore
+ */
 export const STOP_VIDEO &#x3D; &#x27;[Video] Stop Video Clip&#x27;;
 
+/**
+ * This actions is executed when it is adding a video
+ * @implements
+ * Action
+ */
 export class SetVideoClips implements Action {
+    /**
+     * Describe the action that allow
+     */
     readonly type &#x3D; SET_VIDEO_CLIPS;
+    /**
+     * Initialize a payload
+     * @param payload 
+     */
     constructor(public payload: Video[]) {}
 }
 
+/**
+ * This actions is executed when it is adding a video
+ * @implements
+ * Action
+ */
 export class SetFinishedVideo implements Action {
+    /**
+     * Describe the action that allow
+     */
     readonly type &#x3D; SET_FINISHED_VIDEO;
+    /**
+     * Initialize a payload
+     * @param payload 
+     */
     constructor(public payload: Video[]) {}
 }
 
+/**
+ * This actions is executed when start a video
+ * @implements
+ * Action
+ */
 export class StartVideo implements Action {
+    /**
+     * Describe the action that allow
+     */
     readonly type &#x3D; START_VIDEO;
-  
+    /**
+     * Initialize a payload
+     * @param payload 
+     */
     constructor(public payload: string) {}
   }
-  
-  export class StopVideo implements Action {
-    readonly type &#x3D; STOP_VIDEO;
-  }
 
+/**
+ * This actions is executed when stop a video
+ * @implements
+ * Action
+ */
+export class StopVideo implements Action {
+  /**
+   * Describe the action that allow
+   */
+  readonly type &#x3D; STOP_VIDEO;
+}
+
+/**
+ * Export all actions
+ */
 export type VideoActions &#x3D; SetVideoClips 
 | SetFinishedVideo
 | StartVideo

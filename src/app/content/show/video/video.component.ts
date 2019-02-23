@@ -1,8 +1,9 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { Store } from '@ngrx/store';
+import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { take } from 'rxjs/operators';
+import { filter } from 'rxjs/operators';
 import * as fromRoot from '../../../app.reducer';
+import { Video } from '../../video.model';
 
 /**
  * This component has the video tag to show the full video.
@@ -13,8 +14,10 @@ import * as fromRoot from '../../../app.reducer';
   styleUrls: ['./video.component.scss']
 })
 export class VideoComponent implements OnInit{
+  /**
+   * It is a reference from video tag.
+   */
   @ViewChild('videoPlayer') videoplayer: ElementRef;
-  video$: Observable<string>;
 
   /**
    * Constructor
@@ -23,22 +26,60 @@ export class VideoComponent implements OnInit{
   constructor(private store: Store<fromRoot.State>) { }
 
   /**
+   * This method allow to subscribe the store when the component was create
+   * @method 
    * ngOnInit
-   * @method ngOnInit
    */
   ngOnInit() {
-    this.video$ = this.store.select(fromRoot.getActiveVideo);
+    this.videoRuning();
+  }
+
+  /**
+   * videoRuning
+   * this method susbcribe the videoActive
+   * @method 
+   * videoRuning
+   * @example
+   * videoRuning();
+   * 
+   */
+  videoRuning() {
+    this.store
+        .pipe(select(fromRoot.getActiveVideo), filter(val => val !== null))
+        .subscribe(video => {
+          this.playPauseVideo(video);
+        })
   }
 
   /**
    * playPauseVideo
+   * 
+   * @param videoRun
+   * @example
+   *  playPauseVideo(videoRun);
+   */
+  playPauseVideo(videoRun: Video) {
+    const video = this.videoplayer.nativeElement;
+  
+    video.src=videoRun.url;
+    video.load();
+  
+    if (!video.paused)
+      video.pause();
+    else
+      video.play();
+  }
+
+  /**
+   * playPauseControl
    * When the user make click in the full video this method
    * is called to do the action
-   * @param el 
+   * @param el
+   * @example
+   *  playPauseControl(el);
    */
-  playPauseVideo(el: any) {
-    const video = this.videoplayer.nativeElement;
-    video.load();
+  playPauseControl(el: any) {
+    const video = el.srcElement;
     if (!video.paused)
       video.pause();
     else

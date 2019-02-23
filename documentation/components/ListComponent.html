@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>My app documentation</title>
+        <title>VideoChallengeDoc</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,7 +13,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">My app documentation</a>
+            <a href="../" class="navbar-brand">VideoChallengeDoc</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -162,6 +162,9 @@
                                 <a href="#ngOnInit">ngOnInit</a>
                             </li>
                             <li>
+                                <a href="#playVideo">playVideo</a>
+                            </li>
+                            <li>
                                 <a href="#removeVideo">removeVideo</a>
                             </li>
                             <li>
@@ -190,13 +193,13 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/content/list/list.component.ts:28</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/content/list/list.component.ts:32</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
-                            <div class="io-description"><p>Contructor</p>
+                            <div class="io-description"><p>Initalize videoService and store</p>
 </div>
                             <div>
                                     <b>Parameters :</b>
@@ -273,18 +276,29 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/content/list/list.component.ts:53</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/app/content/list/list.component.ts:70</a></div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>This method is executed to bring the video clips to the lists</p>
+</div>
 
+                            <div>
+                                    <b>Example :</b>
+                                        <div>
+                                            <pre class="line-numbers"><code class="language-html">getVideoClips();</code></pre>
+                                        </div>
+                            </div>
                             <div class="io-description">
                                 <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
                             </div>
+                                <div class="io-description">
+                                    
+                                </div>
                     </td>
                 </tr>
             </tbody>
@@ -311,20 +325,91 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/content/list/list.component.ts:44</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/content/list/list.component.ts:47</a></div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
-                            <div class="io-description"><p>ngOnInit</p>
+                            <div class="io-description"><p>This method is executed after create the component</p>
 </div>
 
                             <div class="io-description">
                                 <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
                             </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="playVideo"></a>
+                        <span class="name">
+                            <b>
+                            playVideo
+                            </b>
+                            <a href="#playVideo"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>playVideo(video)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="82" class="link-to-prism">src/app/content/list/list.component.ts:82</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>This methos is executed to show the full video</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>video</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                                    <b>Example :</b>
+                                        <div>
+                                            <pre class="line-numbers"><code class="language-html">playVideo(video); </code></pre>
+                                        </div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
                     </td>
                 </tr>
             </tbody>
@@ -351,13 +436,15 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/app/content/list/list.component.ts:57</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="94" class="link-to-prism">src/app/content/list/list.component.ts:94</a></div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>This method is executed when it is going delete a lists item from the lists</p>
+</div>
 
                             <div class="io-description">
                                     <b>Parameters :</b>
@@ -386,6 +473,10 @@
                                     </table>
                             </div>
                             <div>
+                                    <b>Example :</b>
+                                        <div>
+                                            <pre class="line-numbers"><code class="language-html">removeVideo(video); </code></pre>
+                                        </div>
                             </div>
                             <div class="io-description">
                                 <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -420,18 +511,29 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/content/list/list.component.ts:49</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/app/content/list/list.component.ts:59</a></div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>This method subscribe an Action to update the list</p>
+</div>
 
+                            <div>
+                                    <b>Example :</b>
+                                        <div>
+                                            <pre class="line-numbers"><code class="language-html">subscribeService();</code></pre>
+                                        </div>
+                            </div>
                             <div class="io-description">
                                 <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
                             </div>
+                                <div class="io-description">
+                                    
+                                </div>
                     </td>
                 </tr>
             </tbody>
@@ -463,10 +565,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/content/list/list.component.ts:28</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/content/list/list.component.ts:32</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>It is a Observable to show Video Clips in the list</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -541,20 +649,23 @@ export class ListComponent implements OnInit {
    */
   videos: Video[] &#x3D; [];
 
+  /**
+   * It is a Observable to show Video Clips in the list
+   * @var
+   */
   videoClips$: Observable&lt;Video[]&gt;
 
   /**
-   * Contructor
-   * 
-   * @constructor
+   * Initalize videoService and store
+   * @param videoService 
+   * @param store 
    */
   constructor(private videoService: VideoService,
               private store: Store&lt;fromRoot.State&gt;) { }
 
 
   /** 
-   * ngOnInit
-   * 
+   * This method is executed after create the component
    * @method ngOnInit
   */
   ngOnInit() {
@@ -562,14 +673,48 @@ export class ListComponent implements OnInit {
     this.subscribeService();
   }
 
+  /**
+   * This method subscribe an Action to update the list
+   * @method
+   * subscribeService
+   * @example
+   * subscribeService();
+   */
   subscribeService() {
     this.videoClips$ &#x3D; this.store.select(fromRoot.getVideoClips)
   }
 
+  /**
+   * This method is executed to bring the video clips to the lists
+   * @method
+   * getVideoClips
+   * @example
+   * getVideoClips();
+   */
   getVideoClips() {
     this.videoService.getVideoClips();
   }
 
+  /**
+   * This methos is executed to show the full video
+   * @method
+   * playVideo
+   * @param video
+   * @example
+   * playVideo(video); 
+   */
+  playVideo(video) {
+    this.videoService.playVideo(video.id);
+  }
+
+  /**
+   * This method is executed when it is going delete a lists item from the lists
+   * @method
+   * removeVideo
+   * @param video
+   * @example
+   * removeVideo(video); 
+   */
   removeVideo(video: Video) {
     this.videoService.removeVideoClip(video);
   }
@@ -579,15 +724,17 @@ export class ListComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;mat-list class&#x3D;&quot;lists_content&quot; color&#x3D;&quot;accent&quot;&gt;
-  &lt;mat-list-item *ngFor&#x3D;&quot;let video of (videoClips$ | async)&quot;&gt;
-    &lt;button (click)&#x3D;&quot;removeVideo(video)&quot; mat-button&gt;&lt;mat-icon&gt;clear&lt;/mat-icon&gt;&lt;/button&gt;
-    &lt;div mat-list-icon class&#x3D;&quot;example-header-image&quot;&gt;&lt;/div&gt;
-    &lt;h4 mat-line&gt; {{ video.title }}  &lt;/h4&gt;
-    &lt;p mat-line&gt; {{ video.timeStart }} / {{ video.timeEnd }} &lt;/p&gt;
-    &lt;mat-divider&gt;&lt;/mat-divider&gt;
-  &lt;/mat-list-item&gt;
-&lt;/mat-list&gt;</code></pre>
+        <pre class="line-numbers"><code class="language-html">&lt;mat-action-list &gt;
+  &lt;div fxLayout&#x3D;&quot;row&quot; *ngFor&#x3D;&quot;let video of (videoClips$ | async)&quot;&gt;
+      &lt;button mat-list-item (click)&#x3D;&quot;playVideo(video)&quot; fxFlex&#x3D;&quot;80&quot;&gt;  
+        &lt;h4 mat-line&gt; {{ video.title }}  &lt;/h4&gt;
+        &lt;p mat-line&gt; {{ video.timeStart }} / {{ video.timeEnd }} &lt;/p&gt;
+        &lt;video width&#x3D;&quot;100&quot; height&#x3D;&quot;100&quot; [src]&#x3D;&quot;video.url&quot;&gt;&lt;/video&gt; 
+      &lt;/button&gt;
+      &lt;button (click)&#x3D;&quot;removeVideo(video)&quot; mat-list-item fxFlex&#x3D;&quot;20&quot;&gt;&lt;mat-icon&gt;clear&lt;/mat-icon&gt;&lt;/button&gt;
+      &lt;mat-divider&gt;&lt;/mat-divider&gt;
+  &lt;/div&gt;
+&lt;/mat-action-list&gt;</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
@@ -598,8 +745,8 @@ export class ListComponent implements OnInit {
     padding: 10px;
 }
 .example-header-image {
-    background-image: url(&#x27;https://material.angular.io/assets/img/examples/shiba1.jpg&#x27;);
-    background-size: cover;
+    height: 30px;
+    width: 30px;
 }</code></pre>
     </div>
 
@@ -628,7 +775,7 @@ export class ListComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><mat-list class="lists_content" color="accent">  <mat-list-item *ngFor="let video of (videoClips$ | async)">    <button (click)="removeVideo(video)" mat-button><mat-icon>clear</mat-icon></button>    <div mat-list-icon class="example-header-image"></div>    <h4 mat-line> {{ video.title }}  </h4>    <p mat-line> {{ video.timeStart }} / {{ video.timeEnd }} </p>    <mat-divider></mat-divider>  </mat-list-item></mat-list></div>'
+        var COMPONENT_TEMPLATE = '<div><mat-action-list >  <div fxLayout="row" *ngFor="let video of (videoClips$ | async)">      <button mat-list-item (click)="playVideo(video)" fxFlex="80">          <h4 mat-line> {{ video.title }}  </h4>        <p mat-line> {{ video.timeStart }} / {{ video.timeEnd }} </p>        <video width="100" height="100" [src]="video.url"></video>       </button>      <button (click)="removeVideo(video)" mat-list-item fxFlex="20"><mat-icon>clear</mat-icon></button>      <mat-divider></mat-divider>  </div></mat-action-list></div>'
     var COMPONENTS = [{'name': 'AddVclipComponent', 'selector': 'app-add-vclip'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ConfigComponent', 'selector': 'app-config'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'ListComponent', 'selector': 'app-list'},{'name': 'ShowComponent', 'selector': 'app-show'},{'name': 'VideoComponent', 'selector': 'app-video'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ListComponent'};

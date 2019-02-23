@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>My app documentation</title>
+        <title>VideoChallengeDoc</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,7 +13,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">My app documentation</a>
+            <a href="../" class="navbar-brand">VideoChallengeDoc</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -404,7 +404,8 @@ export class AddVclipComponent implements OnInit {
       id: Math.round(Math.random() * 10000).toString(),
       title: this.videoForm.value.title,
       timeStart: this.videoForm.value.timeStart,
-      timeEnd: this.videoForm.value.timeEnd
+      timeEnd: this.videoForm.value.timeEnd,
+      url: &#x60;http://clips.vorwaerts-gmbh.de/VfE_html5.mp4#t&#x3D;${this.videoForm.value.timeStart},${this.videoForm.value.timeEnd}&#x60;
     }
 
     this.videoService.addVideoClip(video);

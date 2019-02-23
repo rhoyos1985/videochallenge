@@ -7,7 +7,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "doc": "npx compodoc -p src/tsconfig.app.json -n \"My app documentation\"",
+    "doc": "npx compodoc -p src/tsconfig.app.json -n \"VideoChallengeDoc\" -s -r 4201",
     "e2e": "ng e2e"
   },
   "private": true,

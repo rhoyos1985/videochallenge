@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>My app documentation</title>
+        <title>VideoChallengeDoc</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,7 +13,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">My app documentation</a>
+            <a href="../" class="navbar-brand">VideoChallengeDoc</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -84,10 +84,6 @@ that allow to add, modify and delete video clips from the list</p>
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#runningVideo">runningVideo</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
                                 <a href="#videoClips">videoClips</a>
                             </li>
                         </ul>
@@ -137,12 +133,14 @@ that allow to add, modify and delete video clips from the list</p>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/content/video.service.ts:27</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/content/video.service.ts:23</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Initizalice the store</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -202,15 +200,14 @@ that allow to add, modify and delete video clips from the list</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/content/video.service.ts:37</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/content/video.service.ts:39</a></div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
-                            <div class="io-description"><p>addVideoClip
-To add video clips to the list</p>
+                            <div class="io-description"><p>To add video clips to the list</p>
 </div>
 
                             <div class="io-description">
@@ -240,6 +237,10 @@ To add video clips to the list</p>
                                     </table>
                             </div>
                             <div>
+                                    <b>Example :</b>
+                                        <div>
+                                            <pre class="line-numbers"><code class="language-html">addVideoClip(video);</code></pre>
+                                        </div>
                             </div>
                             <div class="io-description">
                                 <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -274,21 +275,29 @@ To add video clips to the list</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/content/video.service.ts:53</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/app/content/video.service.ts:67</a></div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
-                            <div class="io-description"><p>getVideoClips</p>
-<p>Return all video clips to the list</p>
+                            <div class="io-description"><p>Return all video clips to the list </p>
 </div>
 
+                            <div>
+                                    <b>Example :</b>
+                                        <div>
+                                            <pre class="line-numbers"><code class="language-html">getVideoClips();</code></pre>
+                                        </div>
+                            </div>
                             <div class="io-description">
                                 <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
                             </div>
+                                <div class="io-description">
+                                    
+                                </div>
                     </td>
                 </tr>
             </tbody>
@@ -315,15 +324,14 @@ To add video clips to the list</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/app/content/video.service.ts:63</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="80" class="link-to-prism">src/app/content/video.service.ts:80</a></div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
-                            <div class="io-description"><p>playVideo
-This method is executed when the user make click on the video clip</p>
+                            <div class="io-description"><p>This method is executed when the user make click on the video clip</p>
 </div>
 
                             <div class="io-description">
@@ -353,6 +361,10 @@ This method is executed when the user make click on the video clip</p>
                                     </table>
                             </div>
                             <div>
+                                    <b>Example :</b>
+                                        <div>
+                                            <pre class="line-numbers"><code class="language-html">playVideo(id); </code></pre>
+                                        </div>
                             </div>
                             <div class="io-description">
                                 <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -387,13 +399,15 @@ This method is executed when the user make click on the video clip</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/content/video.service.ts:42</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/content/video.service.ts:52</a></div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>To remove video clips from the list</p>
+</div>
 
                             <div class="io-description">
                                     <b>Parameters :</b>
@@ -422,6 +436,10 @@ This method is executed when the user make click on the video clip</p>
                                     </table>
                             </div>
                             <div>
+                                    <b>Example :</b>
+                                        <div>
+                                            <pre class="line-numbers"><code class="language-html">removeVideoClip(video);</code></pre>
+                                        </div>
                             </div>
                             <div class="io-description">
                                 <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -445,40 +463,6 @@ This method is executed when the user make click on the video clip</p>
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="runningVideo"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            runningVideo</b>
-                            <a href="#runningVideo"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="../interfaces/Video.html" target="_self" >Video</a></code>
-
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/content/video.service.ts:27</a></div>
-                            </td>
-                        </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Show the video clip as full video</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
                         <a name="videoClips"></a>
                         <span class="name">
                             <b>
@@ -497,15 +481,15 @@ This method is executed when the user make click on the video clip</p>
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>[
-        {id: &#x27;video_1&#x27;, title: &#x27;Video Clip 1&#x27;, timeStart: &#x27;00:00:10&#x27;, timeEnd: &#x27;00:00:20&#x27;},
-        {id: &#x27;video_2&#x27;, title: &#x27;Video Clip 2&#x27;, timeStart: &#x27;00:00:21&#x27;, timeEnd: &#x27;00:00:30&#x27;},
-        {id: &#x27;video_3&#x27;, title: &#x27;Video Clip 3&#x27;, timeStart: &#x27;00:00:31&#x27;, timeEnd: &#x27;00:00:40&#x27;}
+        {id: &#x27;video_1&#x27;, title: &#x27;Video Clip 1&#x27;, timeStart: &#x27;00:00:10&#x27;, timeEnd: &#x27;00:00:20&#x27;, url: &#x27;http://clips.vorwaerts-gmbh.de/VfE_html5.mp4#t&#x3D;00:00:10,00:00:20&#x27;},
+        {id: &#x27;video_2&#x27;, title: &#x27;Video Clip 2&#x27;, timeStart: &#x27;00:00:21&#x27;, timeEnd: &#x27;00:00:30&#x27;, url: &#x27;http://clips.vorwaerts-gmbh.de/VfE_html5.mp4#t&#x3D;00:00:21,00:00:30&#x27;},
+        {id: &#x27;video_3&#x27;, title: &#x27;Video Clip 3&#x27;, timeStart: &#x27;00:00:31&#x27;, timeEnd: &#x27;00:00:40&#x27;, url: &#x27;http://clips.vorwaerts-gmbh.de/VfE_html5.mp4#t&#x3D;00:00:31,00:00:40&#x27;}
     ]</code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/content/video.service.ts:18</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/content/video.service.ts:19</a></div>
                             </td>
                         </tr>
 
@@ -526,10 +510,11 @@ This method is executed when the user make click on the video clip</p>
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Video } from &#x27;./video.model&#x27;;
 import { Injectable } from &#x27;@angular/core&#x27;;
-import { Store } from &#x27;@ngrx/store&#x27;;
+import { Store, select } from &#x27;@ngrx/store&#x27;;
 
 import * as VideoActions from &#x27;./video.actions&#x27;;
 import * as fromRoot from &#x27;../app.reducer&#x27;;
+import { filter } from &#x27;rxjs/operators&#x27;;
 
 /**
  * Video service
@@ -542,39 +527,52 @@ export class VideoService {
      * Temporal lists from videoclips
      */
     private videoClips: Video[] &#x3D; [
-        {id: &#x27;video_1&#x27;, title: &#x27;Video Clip 1&#x27;, timeStart: &#x27;00:00:10&#x27;, timeEnd: &#x27;00:00:20&#x27;},
-        {id: &#x27;video_2&#x27;, title: &#x27;Video Clip 2&#x27;, timeStart: &#x27;00:00:21&#x27;, timeEnd: &#x27;00:00:30&#x27;},
-        {id: &#x27;video_3&#x27;, title: &#x27;Video Clip 3&#x27;, timeStart: &#x27;00:00:31&#x27;, timeEnd: &#x27;00:00:40&#x27;}
+        {id: &#x27;video_1&#x27;, title: &#x27;Video Clip 1&#x27;, timeStart: &#x27;00:00:10&#x27;, timeEnd: &#x27;00:00:20&#x27;, url: &#x27;http://clips.vorwaerts-gmbh.de/VfE_html5.mp4#t&#x3D;00:00:10,00:00:20&#x27;},
+        {id: &#x27;video_2&#x27;, title: &#x27;Video Clip 2&#x27;, timeStart: &#x27;00:00:21&#x27;, timeEnd: &#x27;00:00:30&#x27;, url: &#x27;http://clips.vorwaerts-gmbh.de/VfE_html5.mp4#t&#x3D;00:00:21,00:00:30&#x27;},
+        {id: &#x27;video_3&#x27;, title: &#x27;Video Clip 3&#x27;, timeStart: &#x27;00:00:31&#x27;, timeEnd: &#x27;00:00:40&#x27;, url: &#x27;http://clips.vorwaerts-gmbh.de/VfE_html5.mp4#t&#x3D;00:00:31,00:00:40&#x27;}
     ];
 
     /**
-     * Show the video clip as full video
+     * Initizalice the store
+     * @param store 
      */
-    private runningVideo: Video;
-
     constructor(private store: Store&lt;fromRoot.State&gt;) {}
 
     /**
-     * addVideoClip
      * To add video clips to the list
-     * 
-     * @param addVideo 
+     * @method
+     * addVideoClip
+     * @param addVideo
+     * @example
+     * addVideoClip(video);
      */
     addVideoClip(addVideo: Video) {
         this.videoClips.push(addVideo);
         this.store.dispatch(new VideoActions.SetVideoClips(this.videoClips));
     }
 
+    /**
+     * To remove video clips from the list
+     * @method
+     * removeVideoClip
+     * @param video
+     * @example
+     * removeVideoClip(video);
+     */
     removeVideoClip(video: Video) {
         const indexVideo &#x3D; this.videoClips.indexOf(video);
+        const activeVideo &#x3D; this.store.pipe(select(fromRoot.getActiveVideo));
+        console.log(activeVideo);
         this.videoClips.splice(indexVideo,1);
         this.store.dispatch(new VideoActions.SetVideoClips(this.videoClips));
     }
 
     /**
+     * Return all video clips to the list 
+     * @method
      * getVideoClips
-     * 
-     * Return all video clips to the list
+     * @example
+     * getVideoClips();
      */
     getVideoClips() {
         this.store.dispatch(new VideoActions.SetVideoClips(this.videoClips));
@@ -582,9 +580,12 @@ export class VideoService {
     }
 
     /**
-     * playVideo
      * This method is executed when the user make click on the video clip
-     * @param videoId 
+     * @method
+     * playVideo
+     * @param videoId
+     * @example
+     * playVideo(id); 
      */
     playVideo(videoId: string) {
         this.store.dispatch(new VideoActions.StartVideo(videoId))
